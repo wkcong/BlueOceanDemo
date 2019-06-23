@@ -1,0 +1,33 @@
+stages:
+   - analyze
+   - npm_test
+   - docker_test   
+
+project analyze:
+    stage: analyze
+    image: maven:latest
+    tags:
+      - sonar
+    script: mvn clean install sonar:sonar -Dmaven.local.repo=/usr/local/maven/repo
+
+project npm_test:
+   stage: npm_test
+   image: npm:v1
+   tags:
+    - npm
+   script: 
+    - npm -v
+    - node -v
+
+project docker_test:
+   stage: docker_test
+   image: docker:stable
+   services:
+     - docker:dind
+   tags:
+     - docker
+   script:
+      - docker info
+      - docker ps 
+      - docker images
+ 

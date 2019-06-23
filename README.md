@@ -1,2 +1,2 @@
 # BlueOceanDemo
-show how to use Blue Ocean plugin
+show how to use Blue Ocean plugin 
