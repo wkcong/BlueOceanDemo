@@ -5,12 +5,12 @@ import com.wangkang.util.Util;
 public class UseJenkinsfileImpl implements UseJenkinsfile {
     public boolean addJenkinsfile(String jenkinsfileName) {
         //jenkinsfileName is not empty,retuen true
-        return !Util.isEmpty(jenkinsfileName);
+        return true;
     }
 
     public boolean deleteJenkinsfile(String jenkinsfileName) {
         //jenkinsfileName is not empty ; return true
-        return !Util.isEmpty(jenkinsfileName);
+        return true;
     }
 
     public int updateJenkinsfile(int number) {
